@@ -103,7 +103,7 @@ namespace NeuralTest
                     outputFile = args[1];
 
                     if (!int.TryParse(args[2], out epochs) ||
-                        !double.TryParse(args[3], out learningRate) ||
+                        !double.TryParse(args[3].Replace('.', ','), out learningRate) ||
                         !int.TryParse(args[4], out batchSize))
                         Usage();
 
@@ -138,7 +138,7 @@ namespace NeuralTest
                     outputFile = args[2];
 
                     if (!int.TryParse(args[3], out epochs) ||
-                        !double.TryParse(args[4], out learningRate) ||
+                        !double.TryParse(args[4].Replace('.', ','), out learningRate) ||
                         !int.TryParse(args[5], out batchSize))
                         Usage();
 
